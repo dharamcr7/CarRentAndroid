@@ -3,14 +3,10 @@ package com.example.rentcar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.util.Arrays;
-import android.os.Bundle;
 
 public class LoginActivity extends AppCompatActivity {
     EditText usernameEditTxt,passwordEditTxt,studentNameEditTxt;
@@ -51,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Invaild Password ", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, CarRentalMainActivity.class);
                 intent.putExtra("studentName",studentNameEditTxt.getText().toString());
 
                 startActivity(intent);

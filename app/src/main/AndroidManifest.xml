@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".CustomerDetail" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".CarRentalMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
