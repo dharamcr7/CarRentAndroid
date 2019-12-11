@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     CheckBox gpsChkBox, childSeatChkBox;
     EditText noOfDayToRentCar;
 
-    ArrayAdapter<CharSequence> adapter;
-    private ArrayList<CarData> carlist =new ArrayList();
+    ArrayAdapter<CarData> adapter;
+    ArrayList<CarData> carlist =new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +66,14 @@ public class MainActivity extends AppCompatActivity {
     public  void b(){
         {
 
+             adapter  =
+                    new ArrayAdapter<CarData>(getApplicationContext(),  android.R.layout.simple_spinner_dropdown_item, carlist);
+            adapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item);
+
+            spinner.setAdapter(adapter);
             // Create an ArrayAdapter using the string array and a default spinner layout
-            adapter = new ArrayAdapter<CharSequence>(this,
-                    android.R.layout.simple_spinner_dropdown_item, paths);
+          //  adapter = new ArrayAdapter<CharSequence>(this,
+                  //  android.R.layout.simple_spinner_dropdown_item, carlist);
 
             // Specify the layout to use when the list of choices appears
 
